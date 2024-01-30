@@ -2,7 +2,7 @@ library(shiny)
 
 shinyUI(fluidPage(
     
-    titlePanel('Fundamental Probability Distributions'),
+    titlePanel('Play around with Beta distribution parameters'),
     
     sidebarLayout(
         sidebarPanel(

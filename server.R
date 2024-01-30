@@ -18,7 +18,7 @@ shinyServer(function(input, output) {
                                 y=dbeta(seq(0, 1, length=200), input$beta_alpha, input$beta_beta))
         )
         
-        ggplot(dat, aes(x, y)) + geom_line(size=1.2) + theme_bw() + xlab('x') + ylab('') + ggtitle('Probability Density/Mass Function') 
+        ggplot(dat, aes(x, y)) + geom_line(linewidth=1.2) + theme_bw() + xlab('x') + ylab('') + ggtitle('Probability Density/Mass Function') 
     })
     
 
@@ -27,7 +27,7 @@ shinyServer(function(input, output) {
             'Beta' = data.frame(x=seq(0, 1, length=200),
                                 y=pbeta(seq(0, 1, length=200), input$beta_alpha, input$beta_beta)))
         
-        ggplot(dat, aes(x, y)) + geom_line(size=1.2) + theme_bw() + xlab('x') + ylab('') + ggtitle('Cumulative Distibution Function') 
+        ggplot(dat, aes(x, y)) + geom_line(linewidth=1.2) + theme_bw() + xlab('x') + ylab('') + ggtitle('Cumulative Distibution Function') 
     })
     
 })
